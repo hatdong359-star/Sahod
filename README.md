@@ -142,17 +142,31 @@ PLAYWRIGHT_BASE_URL=https://sahod-sandy.vercel.app \
 | `USDC_ASSET_ISSUER_TESTNET` | Testnet USDC issuer for the Enable-USDC trustline |
 | `NEXT_PUBLIC_APP_URL` | Public base URL of the deployment |
 
+## Live stats
+
+Counts pulled from `GET /api/stats` on the live deployment. Demo and test wallets are excluded so the numbers mean something — no inflated "users onboarded."
+
+![Stats](screen-shot/stats.jpg)
+
+| Field | Value |
+|---|---|
+| Unique wallets | 83 |
+| Logins | 84 |
+| Total splits | 2 |
+| Payout runs | 2 |
+| Recipients paid | 4 |
+
 ## Screenshots
 
 Captured from the live deployment during the Playwright run.
 
 | | |
 |---|---|
-| ![Landing](../screen-shot/01-landing.jpg) | ![Connect wallet](../screen-shot/02-connect-popup.jpg) |
-| ![Create split](../screen-shot/03-create-split.jpg) | ![Sign popup](../screen-shot/04-sign-popup.jpg) |
-| ![Contract payout](../screen-shot/05-success.jpg) | ![Stats](../screen-shot/06-stats.jpg) |
+| ![Landing](screen-shot/01-landing.jpg) | ![Connect wallet](screen-shot/02-connect-popup.jpg) |
+| ![Create split](screen-shot/03-create-split.jpg) | ![Sign popup](screen-shot/04-sign-popup.jpg) |
+| ![Contract payout](screen-shot/05-success.jpg) | ![Stats](screen-shot/06-stats.jpg) |
 
-Mobile: `../screen-shot/07-mobile.jpg`
+Mobile: `screen-shot/07-mobile.jpg`
 
 ---
 
