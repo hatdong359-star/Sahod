@@ -46,6 +46,13 @@ contract never holds a float.
    signs it once, and the server submits + polls Soroban RPC. The run is saved with its
    real transaction hash, linked to stellar.expert.
 
+---
+## Demo & Pitch Deck
+
+- **Demo Video:** [Watch Demo](https://drive.google.com/file/d/1bNJnZ5h9aQ8AQoesaI55_k-2-AA3Ac8Q/view?usp=drive_link)
+- **Pitch Deck:** [View Pitch Deck](https://drive.google.com/file/d/19jh1eW9N_4g4ARSdW7-0upCxHgHcobpo/view?usp=drive_link)
+---
+
 ### The contract
 
 The salary-split contract (Rust / `soroban-sdk` 22) exposes:
