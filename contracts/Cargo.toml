@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["salary-split"]
+
+[profile.release]
+codegen-units = 1
+debug = false
+opt-level = "z"
+overflow-checks = true
+panic = "abort"
+strip = "debuginfo"
