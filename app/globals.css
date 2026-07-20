@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-grotesk), var(--font-inter), sans-serif;
+
+  /* Sahod — payroll jade + deep harbor navy on cool paper, one coral accent */
+  --color-paper: #f5f7f8;
+  --color-paper-deep: #eaeff1;
+  --color-ink: #0c1b25;
+  --color-ink-soft: #54636e;
+  --color-brand: #0d9488;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e56;
+  --color-brand-50: #e3f5f1;
+  --color-brand-100: #c6ebe3;
+  --color-accent: #f5765b;
+  --color-accent-50: #fdede8;
+  --color-line: #dde5e8;
+  --color-mist: #edf5f3;
+  --color-positive: #15803d;
+
+  --radius: 1rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+  }
+  body {
+    background:
+      radial-gradient(900px 540px at 88% -160px, #d6efe9 0%, rgba(214, 239, 233, 0) 62%),
+      radial-gradient(720px 420px at 6% -120px, #ffe2da 0%, rgba(255, 226, 218, 0) 55%),
+      var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-brand-100);
+    color: var(--color-brand-800);
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings:
+      "tnum" on,
+      "lnum" on;
+  }
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .card {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    box-shadow:
+      0 1px 2px rgba(12, 27, 37, 0.04),
+      0 18px 40px -28px rgba(13, 148, 136, 0.45);
+  }
+  .btn-primary {
+    background: var(--color-brand);
+    color: #fff;
+    transition:
+      transform 0.12s ease,
+      background 0.15s ease,
+      box-shadow 0.15s ease;
+    box-shadow: 0 12px 26px -12px rgba(13, 148, 136, 0.65);
+  }
+  .btn-primary:hover {
+    background: var(--color-brand-700);
+  }
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  .btn-ghost {
+    border: 1px solid var(--color-line);
+    background: #fff;
+    color: var(--color-ink);
+    transition:
+      border-color 0.15s ease,
+      background 0.15s ease;
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-brand-100);
+    background: var(--color-mist);
+  }
+  .field {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    background: #fff;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.95rem;
+    color: var(--color-ink);
+    outline: none;
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .field:focus {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.16);
+  }
+}
