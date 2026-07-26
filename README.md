@@ -16,7 +16,7 @@
 - [x] **Screenshots of analytics or transaction activity** — `screen-shot/stats.jpg` and the on-chain `salary_split` contract stats
 - [x] **Updated README and documentation** — [proof package](docs/level5-proof-package.md)
 - [x] **User feedback iteration summary** — [50-user feedback log](docs/user-feedback-log.md) and [improvement summary](docs/level5-feedback-iteration-summary.md)
-- [x] **Google Sheet response export** — [open native Google Sheet](<SAHOD_GOOGLE_SHEET_URL>)
+- [x] **Google Sheet response export** — [open native Google Sheet](https://docs.google.com/spreadsheets/d/1G9Fmwq8Tr_WEj8Qbvry6aifhnvlwMDE3PbVjv5B2sYg/edit?usp=drivesdk)
 
 ### Monthly submission
 
@@ -244,7 +244,7 @@ activity should use the testnet contract.
 Two URLs are placeholders until the headless Drive auth flow is run:
 
 ```
-<SAHOD_GOOGLE_SHEET_URL>    # native Google Sheet response export
+https://docs.google.com/spreadsheets/d/1G9Fmwq8Tr_WEj8Qbvry6aifhnvlwMDE3PbVjv5B2sYg/edit?usp=drivesdk    # native Google Sheet response export
 ```
 
 published in the checklist above and the form template at
