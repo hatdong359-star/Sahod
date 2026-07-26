@@ -450,8 +450,88 @@
       "role": "employer",
       "publicKey": "GCWW7BRYDDAFIBAAIHHUGRPBOORB3O6AZ3XLF4PX5QYOZRYAKVFF4MQY",
       "feedback": "Empty state should explain how to continue, not just say \"no data\". Add the next-action CTA right there."
+    },
+    {
+      "id": "sahod-fb-61",
+      "name": "Naomi Jenkins",
+      "email": "naomijenkins.work@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GBVZGCIYBBSNZCJSHMCQEBPTY3BDKC3GHRRKX7TIQ4GN5LEXEKZHM4U7",
+      "feedback": "The cross-border salary split should show the FX rate at the moment of payout, not a stale daily average."
+    },
+    {
+      "id": "sahod-fb-62",
+      "name": "Alexander Reed",
+      "email": "alexreed.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCXLVM5UIIEK7G7HAO7GGDIQBFO4DX4ZFL7XXQZSZ7WFJYR37BDFUZQI",
+      "feedback": "Employer tax withholding should be a per-employee setting, not a global default — different countries, different rates."
+    },
+    {
+      "id": "sahod-fb-63",
+      "name": "Hannah Lewis",
+      "email": "hannahlewis88@gmail.com",
+      "role": "payee",
+      "publicKey": "GAAFQYZ5PJ3Z2IBASIEWSCHE7RMLIS32BP2PCVYJJAPIQFQSASY236RD",
+      "feedback": "Salary streaming per second is great, but the employee view should also show the monthly total, not just the per-second rate."
+    },
+    {
+      "id": "sahod-fb-64",
+      "name": "Rachel Green",
+      "email": "rachelgreen31@gmail.com",
+      "role": "payee",
+      "publicKey": "GC3NGXHSPQGJINDWBK6QK3BJOPJ2QTV2FZY2I2C5XQKLRBZ2FADZNDBZ",
+      "feedback": "Multi-currency payroll (3 employees in 3 currencies) needs a batch view; one-at-a-time is too slow."
+    },
+    {
+      "id": "sahod-fb-65",
+      "name": "Christopher Diaz",
+      "email": "chrisdiaz.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GB7EGVBJ7D6EKPJIGW53V77R3MIHWGH3IB23A3RSKZVTNOQI7Q7Q2CAA",
+      "feedback": "The compliance report export (PDF + CSV) should include the on-chain proof link per payment — auditors will ask."
+    },
+    {
+      "id": "sahod-fb-66",
+      "name": "Benjamin Hayes",
+      "email": "benjaminhayes5@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GD47G6QPTN4QUPQF62SEI43CX3WCMYAJESJGWN54UJ74GYRX7TPGT5L7",
+      "feedback": "Employee onboarding should require ID verification for the first salary, not a wallet connect alone."
+    },
+    {
+      "id": "sahod-fb-67",
+      "name": "Trevor Owens",
+      "email": "trevorowens.dev@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GDFFUJXH4SXHPR2CXCLGX2J6Q3PRJESBDX5FSGGJOBSM2WVNJI5EFUK2",
+      "feedback": "Stream cancellation refund math is correct but the recipient toast is confusing — say \"stream ended, X refunded to employer\"."
+    },
+    {
+      "id": "sahod-fb-68",
+      "name": "Brandon Long",
+      "email": "brandonlong.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GA7IE6D37NBU5R6UYBOFQY6AJ2LC7XR4A7SPBIQH4Q2WYWWKPDS7SP2O",
+      "feedback": "The employer dashboard should show the total payroll burn per month, not just per-employee — that is the CFO view."
+    },
+    {
+      "id": "sahod-fb-69",
+      "name": "Mia Taylor",
+      "email": "miataylorwork@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GCINAZRSOTDYJMWGB7L3M6DR5J3E5HPPGPSXG4IBWKZCUE6MWVF4THO2",
+      "feedback": "Recurring bonus (13th month, performance) should be a separate line, not lumped with the base salary stream."
+    },
+    {
+      "id": "sahod-fb-70",
+      "name": "Calvin Ford",
+      "email": "calvinford.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GCWW7BRYDDAFIBAAIHHUGRPBOORB3O6AZ3XLF4PX5QYOZRYAKVFF4MQY",
+      "feedback": "The mobile employee view should have a \"request advance\" button — most users will use this on the first week."
     }
   ],
-  "sheetResponseExportUrl": "https://docs.google.com/spreadsheets/d/1rT4GDkd7cvHGYf5airKOojN7JItoKTuMW4BQVo0QqKo/edit?usp=drivesdk",
+  "sheetResponseExportUrl": "https://docs.google.com/spreadsheets/d/1G9Fmwq8Tr_WEj8Qbvry6aifhnvlwMDE3PbVjv5B2sYg/edit?usp=drivesdk",
   "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeAcfmMb6koVrC4iS0w3jVTL3yaykkrPZFidQFN_dKNGy88SQ/viewform"
 }
