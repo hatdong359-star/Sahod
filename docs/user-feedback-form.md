@@ -27,4 +27,9 @@ The two URLs above (`<SAHOD_GOOGLE_FORM_URL>` and `<SAHOD_GOOGLE_SHEET_URL>`) ar
 
 ## Sheet response export
 
-- Native Google Sheet response export: https://docs.google.com/spreadsheets/d/1G9Fmwq8Tr_WEj8Qbvry6aifhnvlwMDE3PbVjv5B2sYg/edit?usp=drivesdk
+- Native Google Sheet response export: https://docs.google.com/spreadsheets/d/1rT4GDkd7cvHGYf5airKOojN7JItoKTuMW4BQVo0QqKo/edit?usp=drivesdk
+
+
+## Live Form URL
+
+- Google Form: https://docs.google.com/forms/d/e/1FAIpQLSeAcfmMb6koVrC4iS0w3jVTL3yaykkrPZFidQFN_dKNGy88SQ/viewform
