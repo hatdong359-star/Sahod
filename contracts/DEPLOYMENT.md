@@ -50,8 +50,13 @@ stellar contract invoke --id <ID> --source deployer --network testnet -- \
   --token CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC
 ```
 
-## Mainnet
+## Mainnet (live)
 
-- Contract ID: (not deployed) — switch via `./scripts/deploy.sh public`, set
-  `STELLAR_NETWORK=public` and `SOROBAN_RPC_URL=https://soroban.stellar.org`
-  in `.env.local`, and re-`initialize` with the mainnet native XLM SAC.
+- Contract ID: `CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL`
+- Network passphrase: `Public Global Stellar Network ; September 2015`
+
+Explorer: https://stellar.expert/explorer/public/contract/CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL
+
+Full deploy-tx history (upload/create/initialize tx hashes) wasn't recorded at
+the time and isn't reconstructed here — see the testnet section above for what
+a recorded deploy trail looks like.

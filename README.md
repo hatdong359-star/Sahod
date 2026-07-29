@@ -7,8 +7,8 @@
 - [x] **Public GitHub repository** — link to the public repo
 - [x] **Minimum 20+ meaningful commits** — see commit history on `main`
 - [x] **Live deployed application** — https://sahod-sandy.vercel.app (testnet-pinned app)
-- [x] **PPT/Pitch deck link** — _add deck link here_
-- [x] **Demo video link** — _add demo video link here_
+- [x] **PPT/Pitch deck link** — [View Pitch Deck](https://docs.google.com/presentation/d/1LvjsdOaTYlAskaMyV9ZC0-h59LAUc_Xm/edit?usp=sharing)
+- [x] **Demo video link** — [Watch Demo](https://drive.google.com/file/d/13zcwUUhYi-SKYJsDMIQD-99RI_Mtc2ox/view?usp=sharing)
 
 ### Proof
 
@@ -43,8 +43,10 @@ recipient in the same call**.
 
 Live app: **https://sahod-sandy.vercel.app**
 
-Salary-split contract (testnet):
-[`CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24`](https://stellar.expert/explorer/testnet/contract/CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24)
+Salary-split contract — live on Stellar **mainnet**:
+[`CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL`](https://stellar.expert/explorer/public/contract/CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL)
+(development/testnet deployment used for the cohort:
+[`CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24`](https://stellar.expert/explorer/testnet/contract/CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24))
 
 ---
 
@@ -202,7 +204,7 @@ Mobile: `screen-shot/07-mobile.jpg`
 
 ---
 
-Built on Stellar testnet. Money is real on-chain value; everything else is yours.
+Built on Stellar mainnet. Money is real on-chain value; everything else is yours.
 
 ## Level 5 Proof
 
@@ -231,13 +233,16 @@ curl https://horizon-testnet.stellar.org/accounts/<publicKey>
 
 ### Network note
 
-This cohort runs against the **testnet-deployed** `salary_split` contract
+This cohort ran against the **testnet-deployed** `salary_split` contract
 `CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24` (see
 `contracts/DEPLOYMENT.md` for the full deploy / `initialize` record and a
-representative `pay_split` tx hash). The mainnet contract id advertised above
-(`CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL`) is the README
-marketing slot and is **not** yet deployed; reviewers verifying on-chain
-activity should use the testnet contract.
+representative `pay_split` tx hash) — that was the state of the world when the
+cohort was collected. The mainnet contract id advertised above
+(`CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL`) **is** now deployed
+and live on Stellar mainnet (see `contracts/DEPLOYMENT.md`); full mainnet
+transaction proof beyond the contract id hasn't been recorded yet, so reviewers
+verifying this cohort's on-chain activity should still use the testnet contract
+and tx hash above.
 
 ### Drive auth and form / sheet publish
 
