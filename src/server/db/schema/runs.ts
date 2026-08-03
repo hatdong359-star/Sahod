@@ -6,7 +6,7 @@ import { splits } from './splits';
  * recipient at once. `txHash` is the real, verified Horizon transaction hash.
  */
 export const payoutRuns = pgTable(
-  'payout_runs',
+  'sahod_payout_runs',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     splitId: uuid('split_id')
@@ -29,7 +29,7 @@ export const payoutRuns = pgTable(
 
 /** Per-recipient line of a payout run — the exact amount each address received. */
 export const payoutLines = pgTable(
-  'payout_lines',
+  'sahod_payout_lines',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     runId: uuid('run_id')

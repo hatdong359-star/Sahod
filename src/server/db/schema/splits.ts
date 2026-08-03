@@ -9,7 +9,7 @@ export const splitAssetEnum = pgEnum('split_asset', SPLIT_ASSETS);
  * of recipients by percentage. Owned by the connecting wallet (publicKey).
  */
 export const splits = pgTable(
-  'splits',
+  'sahod_splits',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     publicKey: text('public_key').notNull(),
@@ -23,7 +23,7 @@ export const splits = pgTable(
 
 /** A destination on a split: a label + Stellar address + share of the paycheck. */
 export const recipients = pgTable(
-  'recipients',
+  'sahod_recipients',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     splitId: uuid('split_id')
