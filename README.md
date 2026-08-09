@@ -22,7 +22,7 @@
 
 Submit your GitHub repository link below before the monthly deadline:
 
-**https://github.com/your-org/sahod**
+**https://github.com/hatdong359-star/sahod**
 
 ## 🌐 Mainnet (LIVE)
 
