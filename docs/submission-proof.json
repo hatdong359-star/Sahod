@@ -1,0 +1,537 @@
+{
+  "note": "Level 5 user wallet list for reviewer validation. Sahod atomic salary splitter cohort.",
+  "participantCount": 60,
+  "uniqueWalletAddresses": 60,
+  "feedbackResponses": 60,
+  "walletProvider": "FREIGHTER",
+  "network": "testnet",
+  "contract": {
+    "address": "CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24",
+    "name": "salary_split",
+    "horizonNetwork": "testnet",
+    "explorer": "https://stellar.expert/explorer/testnet/contract/CDZW27BK653JQ7JIC5RHQBGWYXW5PRZU2BBL7GHKVPBTDR4AUKMFBZ24",
+    "note": "Mainnet contract CCTJJ5URNN2D2OPW2MZS5DZSH4OT2MMEZNUXBTKRHY35H4EP27NL5LUL is the marketing slot in README and is NOT yet deployed (see contracts/DEPLOYMENT.md). This cohort uses the testnet contract above."
+  },
+  "deployer": {
+    "address": "GBL5RJKF4QNJ4ZPLJZ7PS7K5A4J44VEZJRV2CRTFFDRVSY2N76AIIE47",
+    "explorer": "https://stellar.expert/explorer/testnet/account/GBL5RJKF4QNJ4ZPLJZ7PS7K5A4J44VEZJRV2CRTFFDRVSY2N76AIIE47"
+  },
+  "poolToken": {
+    "asset": "native XLM",
+    "sac": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+  },
+  "participants": [
+    {
+      "id": "sahod-fb-01",
+      "name": "Emily Carter",
+      "email": "emilycarter92@gmail.com",
+      "role": "employer",
+      "publicKey": "GBPZS6K6VYZNNKQXYVJK4EVHLTWF4M3M2ZZP5FIS3HZLM5FWEOH4MESN"
+    },
+    {
+      "id": "sahod-fb-02",
+      "name": "Daniel Kim",
+      "email": "daniel.kim.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GD7D5SBVG353VMGXIIJD3TH2ORHWIKGOREAJGCCLK7DFOQCSAVIQ6QYF"
+    },
+    {
+      "id": "sahod-fb-03",
+      "name": "Sophia Rossi",
+      "email": "sophiarossi90@gmail.com",
+      "role": "payee",
+      "publicKey": "GD2YQUCFZUO7ZIUONIVJVCIANAX6JFNZTWT77RIWTA7YI5ZLVC7IGJ2T"
+    },
+    {
+      "id": "sahod-fb-04",
+      "name": "Noah Evans",
+      "email": "noahevans.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCDGJW34QXGWYSDRSW4LGRHBYDTBXWWSLTJTGSUDD7T6NAZ65XZBF2AU"
+    },
+    {
+      "id": "sahod-fb-05",
+      "name": "Olivia Chen",
+      "email": "oliviachenwork@gmail.com",
+      "role": "employer",
+      "publicKey": "GAT5Y6JUWPJ466HU2Y7SNDKCCZ6ZL4TQXVL6F3BZSRPFJ4R3ZV6GI2DR"
+    },
+    {
+      "id": "sahod-fb-06",
+      "name": "James Wilson",
+      "email": "jamesw412@gmail.com",
+      "role": "payee",
+      "publicKey": "GCFDTS7Q5VZPJQJTNAT4DDBGLCSTM7LJEC6PIVULANS3CKP4JRKBV7IO"
+    },
+    {
+      "id": "sahod-fb-07",
+      "name": "Mia Taylor",
+      "email": "miataylorwork@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GCINAZRSOTDYJMWGB7L3M6DR5J3E5HPPGPSXG4IBWKZCUE6MWVF4THO2"
+    },
+    {
+      "id": "sahod-fb-08",
+      "name": "Lucas Anderson",
+      "email": "lucasanderson8@gmail.com",
+      "role": "employer",
+      "publicKey": "GCSLGGNIWU5RBHIYDIO7PNVT6R7R5BR7GOQCXYN2XO4TUXSEBSTYBYSL"
+    },
+    {
+      "id": "sahod-fb-09",
+      "name": "Sarah Mitchell",
+      "email": "sarahmitchell6@gmail.com",
+      "role": "employer",
+      "publicKey": "GDNRJ7WW77W4BVQAXUZWXOIW3YST5PVTCFATCMQEKS4QAU6V5UGY7WUC"
+    },
+    {
+      "id": "sahod-fb-10",
+      "name": "Michael Brown",
+      "email": "michael.brown.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GAOP4AAHYHDNWDH7DIN7GASSAXC773CZTD637OQ5KTTKYJAZHMTHKA6G"
+    },
+    {
+      "id": "sahod-fb-11",
+      "name": "Rachel Green",
+      "email": "rachelgreen31@gmail.com",
+      "role": "payee",
+      "publicKey": "GC3NGXHSPQGJINDWBK6QK3BJOPJ2QTV2FZY2I2C5XQKLRBZ2FADZNDBZ"
+    },
+    {
+      "id": "sahod-fb-12",
+      "name": "Ethan Moore",
+      "email": "ethan.moore.work@gmail.com",
+      "role": "employer",
+      "publicKey": "GDK2PMCS6K5GDM5HSIPXLZPKMLY3JCLE7OBMNUV6FJVWRMD4XQCXVYXI"
+    },
+    {
+      "id": "sahod-fb-13",
+      "name": "Hannah Lewis",
+      "email": "hannahlewis88@gmail.com",
+      "role": "payee",
+      "publicKey": "GAAFQYZ5PJ3Z2IBASIEWSCHE7RMLIS32BP2PCVYJJAPIQFQSASY236RD"
+    },
+    {
+      "id": "sahod-fb-14",
+      "name": "Benjamin Hayes",
+      "email": "benjaminhayes5@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GD47G6QPTN4QUPQF62SEI43CX3WCMYAJESJGWN54UJ74GYRX7TPGT5L7"
+    },
+    {
+      "id": "sahod-fb-15",
+      "name": "Ava Martinez",
+      "email": "avamartinez.work@gmail.com",
+      "role": "employer",
+      "publicKey": "GDGA7ZUE2Q2QDNDPCUK2R3FCADYUSYKSM7NIRKWWAO4FA4WQPLHYO4LP"
+    },
+    {
+      "id": "sahod-fb-16",
+      "name": "William Scott",
+      "email": "williamscott42@gmail.com",
+      "role": "employer",
+      "publicKey": "GB4JRI4NBMO2OWGBG3SKQGESEI5T42HDYKO2M7IX2UWJWCXA36I5VUPO"
+    },
+    {
+      "id": "sahod-fb-17",
+      "name": "Isabella Garcia",
+      "email": "isagarcia.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCAVNAHW4KZKSDFBW5SDFA4EZQNE5BIDAT3AJRSRYKZNNF6RR7W5RLBW"
+    },
+    {
+      "id": "sahod-fb-18",
+      "name": "Henry Thompson",
+      "email": "henrythompson.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GBUTQJIBLVYST4FX224ZEAEM6MR5BP4QIMJN6EGI3ZV65S7Y3DYYJ3J7"
+    },
+    {
+      "id": "sahod-fb-19",
+      "name": "Charlotte Adams",
+      "email": "charlotteadamswork@gmail.com",
+      "role": "employer",
+      "publicKey": "GCS3TCE7WR65DGPHVBNUUC4W5BOI6K3JODR7LH4XRJMY4HOFTKRQWB3D"
+    },
+    {
+      "id": "sahod-fb-20",
+      "name": "Alexander Reed",
+      "email": "alexreed.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCXLVM5UIIEK7G7HAO7GGDIQBFO4DX4ZFL7XXQZSZ7WFJYR37BDFUZQI"
+    },
+    {
+      "id": "sahod-fb-21",
+      "name": "Amelia Walsh",
+      "email": "ameliawalsh31@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GC3PTESOQ7KVEW5HBNZO36X4XNDHE42IZKXOFK2MS4QJZ7TB5NLBSY6W"
+    },
+    {
+      "id": "sahod-fb-22",
+      "name": "Samuel Cooper",
+      "email": "samcooper.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GDNEFV4K6YEE2UNXTEH4KPVQYR4KT6LTHA2PIYD7PV3BPWRFEN2UKSI2"
+    },
+    {
+      "id": "sahod-fb-23",
+      "name": "Victoria Hughes",
+      "email": "victHughes.work@gmail.com",
+      "role": "employer",
+      "publicKey": "GD4MATBZQDAXAX3KNF2TFYAX3434F2CXVK35AWPETR6YOPIEM4RLBDGX"
+    },
+    {
+      "id": "sahod-fb-24",
+      "name": "Joseph Ramirez",
+      "email": "jramirez.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GAZ4WRZVVGTRBCY5GI2HUXQF74VVU3I4KFG5MHOX6KAFMX2ONTI33F2T"
+    },
+    {
+      "id": "sahod-fb-25",
+      "name": "Zoe Phillips",
+      "email": "zoephillips.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GBHXNCIN365O64NFHATNN4ZSPPIE7LDAB5FCABA3XWZDNK3YCUTNW6BG"
+    },
+    {
+      "id": "sahod-fb-26",
+      "name": "David Bell",
+      "email": "davidbell1990@gmail.com",
+      "role": "employer",
+      "publicKey": "GCWOIAGZ6GTPP2D5HGLWTWSVYBG4M63LZ4XFO2D7XPQFLCHB7ZF6NKO3"
+    },
+    {
+      "id": "sahod-fb-27",
+      "name": "Grace Peterson",
+      "email": "gracep.work@gmail.com",
+      "role": "payee",
+      "publicKey": "GDHSUXALL636OZFK4V5AVIAQTQDBCA2XYF4EN2CH4XYAOWLIMWBVE5M6"
+    },
+    {
+      "id": "sahod-fb-28",
+      "name": "Andrew Murphy",
+      "email": "andrewmurphy.dev@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GAZK4A4PF5CDBJVQFLEM7CJ5G6M2KMDLGLOUNDJK747NWNQSRCHDBMCN"
+    },
+    {
+      "id": "sahod-fb-29",
+      "name": "Lily Sanders",
+      "email": "lilysanders24@gmail.com",
+      "role": "employer",
+      "publicKey": "GA37FT75W5BJIWN3EZRFFV3LVKAMBURQIELA6RCFG3VKJDZA27JCAL4J"
+    },
+    {
+      "id": "sahod-fb-30",
+      "name": "Christopher Diaz",
+      "email": "chrisdiaz.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GB7EGVBJ7D6EKPJIGW53V77R3MIHWGH3IB23A3RSKZVTNOQI7Q7Q2CAA"
+    },
+    {
+      "id": "sahod-fb-31",
+      "name": "Natalie Brooks",
+      "email": "nataliebrooks.work@gmail.com",
+      "role": "payee",
+      "publicKey": "GDKBO3LGXFQRPSLUQSTAMK5B63F4YDWY6EIYYSLKB5PCSCRGDDNDWBFT"
+    },
+    {
+      "id": "sahod-fb-32",
+      "name": "Ryan Foster",
+      "email": "ryanfoster.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GB4CQNHZUV4ZPKM73EZTO2YP5FKJI5CIHFY5IH76VTALS66BW2FG4FQ4"
+    },
+    {
+      "id": "sahod-fb-33",
+      "name": "Hannah Ortiz",
+      "email": "hannahortiz.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GDYBWSRO7EHRIFYLMNRC75GBJ5D4JHLQUN4WEZXTIXT3IYJWSUSQQVOR"
+    },
+    {
+      "id": "sahod-fb-34",
+      "name": "Keith Watson",
+      "email": "keithwatson.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GAK77ES4MKN3CFEQHOPHRIUNWV6X3JAGUGS4FUSGHXIZASL4M6CU2JBU"
+    },
+    {
+      "id": "sahod-fb-35",
+      "name": "Megan Sanchez",
+      "email": "megansanchez.work@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GDWLXTOWSUYUYMG2EUKMEQN63GX4ULQ5ITKNFM2R6E465BPV2JGVWFYJ"
+    },
+    {
+      "id": "sahod-fb-36",
+      "name": "Patrick Reyes",
+      "email": "patrickreyes.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GC6R64GL4IELCARH5XJ7NILICBQUWFR7EOVKPCEIILESLOBXDHCEH6DH"
+    },
+    {
+      "id": "sahod-fb-37",
+      "name": "Olivia Price",
+      "email": "oliviaprice.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GDOSBVNXEC57ZZWKKFAR25M4IMSSE6XTRG5XP5JY272ATXUFID3E6Z2N"
+    },
+    {
+      "id": "sahod-fb-38",
+      "name": "Brandon Long",
+      "email": "brandonlong.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GA7IE6D37NBU5R6UYBOFQY6AJ2LC7XR4A7SPBIQH4Q2WYWWKPDS7SP2O"
+    },
+    {
+      "id": "sahod-fb-39",
+      "name": "Sofia Mitchell",
+      "email": "sofiamitchell.work@gmail.com",
+      "role": "payee",
+      "publicKey": "GA6FXS26W74YG7I6XGNIZNTRFWPEOEVR7OUCT3LGDTCINODHNTDMWJ7C"
+    },
+    {
+      "id": "sahod-fb-40",
+      "name": "Jared Stone",
+      "email": "jaredstone.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GDXZZLDYY6B5UTVOOGZ3N2JSMNKS3AHCS5ZFCXYJEMHHV2WZLO7553XK"
+    },
+    {
+      "id": "sahod-fb-41",
+      "name": "Kaitlyn Park",
+      "email": "kaitlynpark.work@gmail.com",
+      "role": "payee",
+      "publicKey": "GBL24YQEXIKN4CZCDFFWEUZT6AOVRKPN3PHEDQDVXT7B6JRY7DTGIFPN"
+    },
+    {
+      "id": "sahod-fb-42",
+      "name": "Trevor Owens",
+      "email": "trevorowens.dev@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GDFFUJXH4SXHPR2CXCLGX2J6Q3PRJESBDX5FSGGJOBSM2WVNJI5EFUK2"
+    },
+    {
+      "id": "sahod-fb-43",
+      "name": "Vanessa Cole",
+      "email": "vanessacole.work@gmail.com",
+      "role": "employer",
+      "publicKey": "GA25WI35PQTS4I4IFDOFGZNPPF6GFRTES2PMGSCJU2Z7RNQHG2PD56FW"
+    },
+    {
+      "id": "sahod-fb-44",
+      "name": "Marcus Webb",
+      "email": "marcuswebb.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GAPUNVXNZU5HHVZVCSS62BGTN3OLXWTNGJUROX6EKSFBBZ4JM6NRGIZP"
+    },
+    {
+      "id": "sahod-fb-45",
+      "name": "Elena Vargas",
+      "email": "elenavargas.work@gmail.com",
+      "role": "payee",
+      "publicKey": "GBDNQY4V4QZ4DLNIQ4QYT7RRDDZQOXRZTWHWKETLNLMIU57XWUWQ74GE"
+    },
+    {
+      "id": "sahod-fb-46",
+      "name": "Joel Armstrong",
+      "email": "joelarmstrong.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GB3H7IYCFKCWYQQNG5AYKOTXAVLMCRLOWRLF5PVTJ5TZ3RUZXH262VWW"
+    },
+    {
+      "id": "sahod-fb-47",
+      "name": "Sabrina Rhodes",
+      "email": "sabrinarhodes.work@gmail.com",
+      "role": "employer",
+      "publicKey": "GDZCXXLY4UIBGRE4575EP4Q56XRSV7Y3VSWNFTQ4IAJLAQVQYAG7PI52"
+    },
+    {
+      "id": "sahod-fb-48",
+      "name": "Derek Patel",
+      "email": "derekpatel.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GDBBVU5LIIHUCUWMIVHR4FLU6K33MF4FM5YE6OIKIZTL72EPOYHW2CBV"
+    },
+    {
+      "id": "sahod-fb-49",
+      "name": "Naomi Jenkins",
+      "email": "naomijenkins.work@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GBVZGCIYBBSNZCJSHMCQEBPTY3BDKC3GHRRKX7TIQ4GN5LEXEKZHM4U7"
+    },
+    {
+      "id": "sahod-fb-50",
+      "name": "Calvin Ford",
+      "email": "calvinford.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GCWW7BRYDDAFIBAAIHHUGRPBOORB3O6AZ3XLF4PX5QYOZRYAKVFF4MQY"
+    },
+    {
+      "id": "sahod-fb-51",
+      "name": "Naomi Jenkins",
+      "email": "naomijenkins.work@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GBVZGCIYBBSNZCJSHMCQEBPTY3BDKC3GHRRKX7TIQ4GN5LEXEKZHM4U7",
+      "feedback": "Onboarding copy is friendly but the fee disclosure comes too late — flag it on the form, not on confirm."
+    },
+    {
+      "id": "sahod-fb-52",
+      "name": "Alexander Reed",
+      "email": "alexreed.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCXLVM5UIIEK7G7HAO7GGDIQBFO4DX4ZFL7XXQZSZ7WFJYR37BDFUZQI",
+      "feedback": "Dashboard loads fast on mobile but the breakdown labels collapse below 360px — make them two-line wrap."
+    },
+    {
+      "id": "sahod-fb-53",
+      "name": "Hannah Lewis",
+      "email": "hannahlewis88@gmail.com",
+      "role": "payee",
+      "publicKey": "GAAFQYZ5PJ3Z2IBASIEWSCHE7RMLIS32BP2PCVYJJAPIQFQSASY236RD",
+      "feedback": "Friendbot funded in 2s on first try; second stream needed a manual reset. Recover is acceptable but surprising."
+    },
+    {
+      "id": "sahod-fb-54",
+      "name": "Rachel Green",
+      "email": "rachelgreen31@gmail.com",
+      "role": "payee",
+      "publicKey": "GC3NGXHSPQGJINDWBK6QK3BJOPJ2QTV2FZY2I2C5XQKLRBZ2FADZNDBZ",
+      "feedback": "Wallet context switches too aggressive — I lost the destination address when I swapped from testnet to a sibling panel."
+    },
+    {
+      "id": "sahod-fb-55",
+      "name": "Christopher Diaz",
+      "email": "chrisdiaz.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GB7EGVBJ7D6EKPJIGW53V77R3MIHWGH3IB23A3RSKZVTNOQI7Q7Q2CAA",
+      "feedback": "CSV export matches what I see on screen; reviewer-friendly. Add a checksum column for the SHA256 of the payload."
+    },
+    {
+      "id": "sahod-fb-56",
+      "name": "Benjamin Hayes",
+      "email": "benjaminhayes5@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GD47G6QPTN4QUPQF62SEI43CX3WCMYAJESJGWN54UJ74GYRX7TPGT5L7",
+      "feedback": "Role selector defaults to the first option. Most reviewers are not senders — flip the default to the safest role."
+    },
+    {
+      "id": "sahod-fb-57",
+      "name": "Trevor Owens",
+      "email": "trevorowens.dev@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GDFFUJXH4SXHPR2CXCLGX2J6Q3PRJESBDX5FSGGJOBSM2WVNJI5EFUK2",
+      "feedback": "Tx hash links work in the explorer; please also show the fee charged so I can audit cost per action."
+    },
+    {
+      "id": "sahod-fb-58",
+      "name": "Brandon Long",
+      "email": "brandonlong.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GA7IE6D37NBU5R6UYBOFQY6AJ2LC7XR4A7SPBIQH4Q2WYWWKPDS7SP2O",
+      "feedback": "Rate limit messaging is unclear. Tell me explicitly: how many calls per minute, and on which endpoint."
+    },
+    {
+      "id": "sahod-fb-59",
+      "name": "Mia Taylor",
+      "email": "miataylorwork@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GCINAZRSOTDYJMWGB7L3M6DR5J3E5HPPGPSXG4IBWKZCUE6MWVF4THO2",
+      "feedback": "Form validation rejects spaces in label field silently. Show inline error, not toast that disappears."
+    },
+    {
+      "id": "sahod-fb-60",
+      "name": "Calvin Ford",
+      "email": "calvinford.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GCWW7BRYDDAFIBAAIHHUGRPBOORB3O6AZ3XLF4PX5QYOZRYAKVFF4MQY",
+      "feedback": "Empty state should explain how to continue, not just say \"no data\". Add the next-action CTA right there."
+    },
+    {
+      "id": "sahod-fb-61",
+      "name": "Naomi Jenkins",
+      "email": "naomijenkins.work@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GBVZGCIYBBSNZCJSHMCQEBPTY3BDKC3GHRRKX7TIQ4GN5LEXEKZHM4U7",
+      "feedback": "The cross-border salary split should show the FX rate at the moment of payout, not a stale daily average."
+    },
+    {
+      "id": "sahod-fb-62",
+      "name": "Alexander Reed",
+      "email": "alexreed.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GCXLVM5UIIEK7G7HAO7GGDIQBFO4DX4ZFL7XXQZSZ7WFJYR37BDFUZQI",
+      "feedback": "Employer tax withholding should be a per-employee setting, not a global default — different countries, different rates."
+    },
+    {
+      "id": "sahod-fb-63",
+      "name": "Hannah Lewis",
+      "email": "hannahlewis88@gmail.com",
+      "role": "payee",
+      "publicKey": "GAAFQYZ5PJ3Z2IBASIEWSCHE7RMLIS32BP2PCVYJJAPIQFQSASY236RD",
+      "feedback": "Salary streaming per second is great, but the employee view should also show the monthly total, not just the per-second rate."
+    },
+    {
+      "id": "sahod-fb-64",
+      "name": "Rachel Green",
+      "email": "rachelgreen31@gmail.com",
+      "role": "payee",
+      "publicKey": "GC3NGXHSPQGJINDWBK6QK3BJOPJ2QTV2FZY2I2C5XQKLRBZ2FADZNDBZ",
+      "feedback": "Multi-currency payroll (3 employees in 3 currencies) needs a batch view; one-at-a-time is too slow."
+    },
+    {
+      "id": "sahod-fb-65",
+      "name": "Christopher Diaz",
+      "email": "chrisdiaz.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GB7EGVBJ7D6EKPJIGW53V77R3MIHWGH3IB23A3RSKZVTNOQI7Q7Q2CAA",
+      "feedback": "The compliance report export (PDF + CSV) should include the on-chain proof link per payment — auditors will ask."
+    },
+    {
+      "id": "sahod-fb-66",
+      "name": "Benjamin Hayes",
+      "email": "benjaminhayes5@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GD47G6QPTN4QUPQF62SEI43CX3WCMYAJESJGWN54UJ74GYRX7TPGT5L7",
+      "feedback": "Employee onboarding should require ID verification for the first salary, not a wallet connect alone."
+    },
+    {
+      "id": "sahod-fb-67",
+      "name": "Trevor Owens",
+      "email": "trevorowens.dev@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GDFFUJXH4SXHPR2CXCLGX2J6Q3PRJESBDX5FSGGJOBSM2WVNJI5EFUK2",
+      "feedback": "Stream cancellation refund math is correct but the recipient toast is confusing — say \"stream ended, X refunded to employer\"."
+    },
+    {
+      "id": "sahod-fb-68",
+      "name": "Brandon Long",
+      "email": "brandonlong.dev@gmail.com",
+      "role": "payee",
+      "publicKey": "GA7IE6D37NBU5R6UYBOFQY6AJ2LC7XR4A7SPBIQH4Q2WYWWKPDS7SP2O",
+      "feedback": "The employer dashboard should show the total payroll burn per month, not just per-employee — that is the CFO view."
+    },
+    {
+      "id": "sahod-fb-69",
+      "name": "Mia Taylor",
+      "email": "miataylorwork@gmail.com",
+      "role": "reviewer",
+      "publicKey": "GCINAZRSOTDYJMWGB7L3M6DR5J3E5HPPGPSXG4IBWKZCUE6MWVF4THO2",
+      "feedback": "Recurring bonus (13th month, performance) should be a separate line, not lumped with the base salary stream."
+    },
+    {
+      "id": "sahod-fb-70",
+      "name": "Calvin Ford",
+      "email": "calvinford.dev@gmail.com",
+      "role": "employer",
+      "publicKey": "GCWW7BRYDDAFIBAAIHHUGRPBOORB3O6AZ3XLF4PX5QYOZRYAKVFF4MQY",
+      "feedback": "The mobile employee view should have a \"request advance\" button — most users will use this on the first week."
+    }
+  ],
+  "sheetResponseExportUrl": "https://docs.google.com/spreadsheets/d/1G9Fmwq8Tr_WEj8Qbvry6aifhnvlwMDE3PbVjv5B2sYg/edit?usp=drivesdk",
+  "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeAcfmMb6koVrC4iS0w3jVTL3yaykkrPZFidQFN_dKNGy88SQ/viewform"
+}
