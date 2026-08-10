@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { StrKey } from '@stellar/stellar-sdk';
-import { and, desc, eq } from 'drizzle-orm';
+import { and, desc, eq, lt } from 'drizzle-orm';
 import { env } from '@/server/config/env';
 import { db } from '@/server/db/client';
 import { payoutLines, payoutRuns, recipients, splits } from '@/server/db/schema';
@@ -66,14 +66,22 @@ export const splitService = {
     return splitService.getOwned(split.id, publicKey);
   },
 
-  async listByOwner(publicKey: string) {
+  async listByOwner(
+    publicKey: string,
+    opts: { limit: number; cursor?: Date } = { limit: 20 },
+  ) {
+    const { limit } = opts;
+    const cursorFilter = opts.cursor ? lt(splits.createdAt, opts.cursor) : undefined;
     const rows = await db
       .select()
       .from(splits)
-      .where(eq(splits.publicKey, publicKey))
-      .orderBy(desc(splits.createdAt));
+      .where(and(eq(splits.publicKey, publicKey), cursorFilter))
+      .orderBy(desc(splits.createdAt))
+      .limit(limit + 1);
+    const hasNext = rows.length > limit;
+    const pageRows = hasNext ? rows.slice(0, limit) : rows;
     const out = [];
-    for (const s of rows) {
+    for (const s of pageRows) {
       const recs = await db
         .select()
         .from(recipients)
@@ -82,7 +90,10 @@ export const splitService = {
       const runCount = await db.select().from(payoutRuns).where(eq(payoutRuns.splitId, s.id));
       out.push({ ...s, recipients: recs, runCount: runCount.length });
     }
-    return out;
+    const nextCursor = hasNext
+      ? (pageRows[pageRows.length - 1] as { createdAt: Date }).createdAt.toISOString()
+      : null;
+    return { items: out, nextCursor };
   },
 
   async getOwned(id: string, publicKey: string) {

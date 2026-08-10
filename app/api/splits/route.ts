@@ -21,9 +21,21 @@ const createSchema = z.object({
   recipients: z.array(recipientSchema).min(2).max(20),
 });
 
-async function listSplits(_req: NextRequest, ctx: HandlerContext) {
-  const splits = await splitService.listByOwner(ctx.publicKey as string);
-  return ok({ splits });
+const listQuerySchema = z.object({
+  cursor: z.string().datetime().optional(),
+  limit: z.coerce.number().int().min(1).max(50).default(20),
+});
+
+async function listSplits(req: NextRequest, ctx: HandlerContext) {
+  const { cursor, limit } = listQuerySchema.parse({
+    cursor: req.nextUrl.searchParams.get('cursor') ?? undefined,
+    limit: req.nextUrl.searchParams.get('limit') ?? undefined,
+  });
+  const page = await splitService.listByOwner(ctx.publicKey as string, {
+    limit,
+    cursor: cursor ? new Date(cursor) : undefined,
+  });
+  return ok({ splits: page.items, nextCursor: page.nextCursor });
 }
 
 async function createSplit(req: NextRequest, ctx: HandlerContext) {
