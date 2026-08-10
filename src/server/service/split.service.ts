@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { StrKey } from '@stellar/stellar-sdk';
-import { and, desc, eq, lt } from 'drizzle-orm';
+import { and, desc, eq, inArray, lt, sql } from 'drizzle-orm';
 import { env } from '@/server/config/env';
 import { db } from '@/server/db/client';
 import { payoutLines, payoutRuns, recipients, splits } from '@/server/db/schema';
@@ -80,16 +80,35 @@ export const splitService = {
       .limit(limit + 1);
     const hasNext = rows.length > limit;
     const pageRows = hasNext ? rows.slice(0, limit) : rows;
-    const out = [];
-    for (const s of pageRows) {
-      const recs = await db
-        .select()
-        .from(recipients)
-        .where(eq(recipients.splitId, s.id))
-        .orderBy(recipients.sortOrder);
-      const runCount = await db.select().from(payoutRuns).where(eq(payoutRuns.splitId, s.id));
-      out.push({ ...s, recipients: recs, runCount: runCount.length });
+    if (pageRows.length === 0) {
+      return { items: [], nextCursor: null };
     }
+    const splitIds = pageRows.map((s) => s.id);
+    const recs = await db
+      .select()
+      .from(recipients)
+      .where(inArray(recipients.splitId, splitIds))
+      .orderBy(recipients.sortOrder);
+    const runCountRows = await db
+      .select({ splitId: payoutRuns.splitId, runCount: sql<number>`count(*)::int` })
+      .from(payoutRuns)
+      .where(inArray(payoutRuns.splitId, splitIds))
+      .groupBy(payoutRuns.splitId);
+    const recsBySplit = new Map<string, typeof recs>();
+    for (const r of recs) {
+      const list = recsBySplit.get(r.splitId) ?? [];
+      list.push(r);
+      recsBySplit.set(r.splitId, list);
+    }
+    const countBySplit = new Map<string, number>();
+    for (const row of runCountRows) {
+      countBySplit.set(row.splitId, Number(row.runCount) || 0);
+    }
+    const out = pageRows.map((s) => ({
+      ...s,
+      recipients: recsBySplit.get(s.id) ?? [],
+      runCount: countBySplit.get(s.id) ?? 0,
+    }));
     const nextCursor = hasNext
       ? (pageRows[pageRows.length - 1] as { createdAt: Date }).createdAt.toISOString()
       : null;
