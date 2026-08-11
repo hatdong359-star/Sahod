@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 import { ok } from '@/server/lib/http';
 import { compose } from '@/server/middleware/compose';
 import { withError } from '@/server/middleware/withError';
+import { withRateLimit } from '@/server/middleware/withRateLimit';
 import { statsService } from '@/server/service/stats.service';
 
 async function getStats(_req: NextRequest) {
@@ -11,4 +12,4 @@ async function getStats(_req: NextRequest) {
   return ok(stats);
 }
 
-export const GET = compose(withError)(getStats);
+export const GET = compose(withError, withRateLimit)(getStats);
