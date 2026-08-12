@@ -94,10 +94,15 @@ export const authService = {
       throw new AppError('UNAUTHORIZED', 'Challenge not found or expired', 401);
     }
 
-    await db
+    const consumed = await db
       .update(authNonces)
       .set({ consumedAt: new Date() })
-      .where(eq(authNonces.nonce, matched.nonce));
+      .where(and(eq(authNonces.nonce, matched.nonce), isNull(authNonces.consumedAt)))
+      .returning({ nonce: authNonces.nonce });
+
+    if (consumed.length === 0) {
+      throw new AppError('UNAUTHORIZED', 'Challenge already used', 401);
+    }
 
     const expiresAt = new Date(Date.now() + env.SESSION_TTL_SECONDS * 1000);
     const [session] = await db
