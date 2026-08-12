@@ -6,6 +6,7 @@ import { db } from '@/server/db/client';
 import { payoutLines, payoutRuns, recipients, splits } from '@/server/db/schema';
 import type { SplitAsset } from '@/server/db/schema/splits';
 import { AppError } from '@/server/lib/http';
+import { isUniqueViolation } from '@/server/lib/postgresErrors';
 import { computeLines } from '@/server/lib/splitMath';
 import {
   buildPaySplitXdr,
@@ -235,18 +236,27 @@ export const splitService = {
       throw new AppError('ALREADY_EXISTS', 'This payout is already recorded', 409);
     }
 
-    const [run] = await db
-      .insert(payoutRuns)
-      .values({
-        splitId: id,
-        publicKey,
-        asset: data.asset,
-        totalAmount: data.totalAmount,
-        txHash: data.txHash,
-        mode: data.mode,
-        network: env.STELLAR_NETWORK,
-      })
-      .returning();
+    let run: typeof payoutRuns.$inferSelect;
+    try {
+      const inserted = await db
+        .insert(payoutRuns)
+        .values({
+          splitId: id,
+          publicKey,
+          asset: data.asset,
+          totalAmount: data.totalAmount,
+          txHash: data.txHash,
+          mode: data.mode,
+          network: env.STELLAR_NETWORK,
+        })
+        .returning();
+      run = inserted[0];
+    } catch (err) {
+      if (isUniqueViolation(err, 'sahod_payout_runs_tx_hash_key')) {
+        throw new AppError('ALREADY_EXISTS', 'This payout is already recorded', 409);
+      }
+      throw err;
+    }
 
     await db.insert(payoutLines).values(
       data.lines.map((l) => ({
