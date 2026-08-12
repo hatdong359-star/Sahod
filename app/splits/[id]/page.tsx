@@ -134,7 +134,7 @@ export default function SplitDetailPage() {
   async function payViaContract() {
     if (!split || !publicKey) return;
     for (let attempt = 0; attempt < 2; attempt++) {
-      const built = await api(`/api/splits/${id}/runs/build`, { totalAmount: amount });
+      const built = await api(`/api/splits/${id}/runs/build-xdr`, { totalAmount: amount });
       const signedXdr = await sign(built.xdr, publicKey);
       try {
         await api(`/api/splits/${id}/runs`, { signedXdr, totalAmount: amount });
