@@ -24,16 +24,19 @@ const createSchema = z.object({
 const listQuerySchema = z.object({
   cursor: z.string().datetime().optional(),
   limit: z.coerce.number().int().min(1).max(50).default(20),
+  asset: z.enum(['XLM', 'USDC']).optional(),
 });
 
 async function listSplits(req: NextRequest, ctx: HandlerContext) {
-  const { cursor, limit } = listQuerySchema.parse({
+  const { cursor, limit, asset } = listQuerySchema.parse({
     cursor: req.nextUrl.searchParams.get('cursor') ?? undefined,
     limit: req.nextUrl.searchParams.get('limit') ?? undefined,
+    asset: req.nextUrl.searchParams.get('asset') ?? undefined,
   });
   const page = await splitService.listByOwner(ctx.publicKey as string, {
     limit,
     cursor: cursor ? new Date(cursor) : undefined,
+    asset,
   });
   return ok({ splits: page.items, nextCursor: page.nextCursor });
 }

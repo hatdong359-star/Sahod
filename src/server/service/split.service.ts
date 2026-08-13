@@ -69,14 +69,18 @@ export const splitService = {
 
   async listByOwner(
     publicKey: string,
-    opts: { limit: number; cursor?: Date } = { limit: 20 },
+    opts: { limit: number; cursor?: Date; asset?: SplitAsset } = { limit: 20 },
   ) {
     const { limit } = opts;
     const cursorFilter = opts.cursor ? lt(splits.createdAt, opts.cursor) : undefined;
+    const assetFilter = opts.asset ? eq(splits.asset, opts.asset) : undefined;
+    const whereClauses = [eq(splits.publicKey, publicKey), cursorFilter, assetFilter].filter(
+      (clause): clause is NonNullable<typeof clause> => clause !== undefined,
+    );
     const rows = await db
       .select()
       .from(splits)
-      .where(and(eq(splits.publicKey, publicKey), cursorFilter))
+      .where(and(...whereClauses))
       .orderBy(desc(splits.createdAt))
       .limit(limit + 1);
     const hasNext = rows.length > limit;
