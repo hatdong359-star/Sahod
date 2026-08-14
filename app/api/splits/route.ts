@@ -7,6 +7,7 @@ import type { HandlerContext } from '@/server/middleware/compose';
 import { compose } from '@/server/middleware/compose';
 import { withAuth } from '@/server/middleware/withAuth';
 import { withError } from '@/server/middleware/withError';
+import { withRateLimit } from '@/server/middleware/withRateLimit';
 import { splitService } from '@/server/service/split.service';
 
 const recipientSchema = z.object({
@@ -48,4 +49,4 @@ async function createSplit(req: NextRequest, ctx: HandlerContext) {
 }
 
 export const GET = compose(withError, withAuth)(listSplits);
-export const POST = compose(withError, withAuth)(createSplit);
+export const POST = compose(withError, withRateLimit, withAuth)(createSplit);
