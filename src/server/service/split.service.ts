@@ -120,7 +120,13 @@ export const splitService = {
     return { items: out, nextCursor };
   },
 
-  async getOwned(id: string, publicKey: string) {
+  async getOwned(
+    id: string,
+    publicKey: string,
+    opts: { runsLimit?: number; runsCursor?: Date } = {},
+  ) {
+    const runsLimit = opts.runsLimit ?? 10;
+    const cursorFilter = opts.runsCursor ? lt(payoutRuns.createdAt, opts.runsCursor) : undefined;
     const [split] = await db
       .select()
       .from(splits)
@@ -132,17 +138,37 @@ export const splitService = {
       .from(recipients)
       .where(eq(recipients.splitId, id))
       .orderBy(recipients.sortOrder);
-    const runs = await db
+    const runRows = await db
       .select()
       .from(payoutRuns)
-      .where(eq(payoutRuns.splitId, id))
-      .orderBy(desc(payoutRuns.createdAt));
-    const runsWithLines = [];
-    for (const run of runs) {
-      const lines = await db.select().from(payoutLines).where(eq(payoutLines.runId, run.id));
-      runsWithLines.push({ ...run, lines });
+      .where(and(eq(payoutRuns.splitId, id), cursorFilter))
+      .orderBy(desc(payoutRuns.createdAt))
+      .limit(runsLimit + 1);
+    const hasNextRuns = runRows.length > runsLimit;
+    const pageRuns = hasNextRuns ? runRows.slice(0, runsLimit) : runRows;
+    const runIds = pageRuns.map((r) => r.id);
+    const linesByRun = new Map<string, typeof payoutLines.$inferSelect[]>();
+    if (runIds.length > 0) {
+      const allLines = await db
+        .select()
+        .from(payoutLines)
+        .where(inArray(payoutLines.runId, runIds));
+      for (const line of allLines) {
+        const list = linesByRun.get(line.runId) ?? [];
+        list.push(line);
+        linesByRun.set(line.runId, list);
+      }
     }
-    return { ...split, recipients: recs, runs: runsWithLines };
+    const runsWithLines = pageRuns.map((run) => ({ ...run, lines: linesByRun.get(run.id) ?? [] }));
+    const nextRunsCursor = hasNextRuns
+      ? (pageRuns[pageRuns.length - 1] as { createdAt: Date }).createdAt.toISOString()
+      : null;
+    return {
+      ...split,
+      recipients: recs,
+      runs: runsWithLines,
+      runsNextCursor: nextRunsCursor,
+    };
   },
 
   async preview(id: string, publicKey: string, total: string) {
