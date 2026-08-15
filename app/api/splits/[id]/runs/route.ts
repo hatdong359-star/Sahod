@@ -8,6 +8,7 @@ import type { HandlerContext } from '@/server/middleware/compose';
 import { compose } from '@/server/middleware/compose';
 import { withAuth } from '@/server/middleware/withAuth';
 import { withError } from '@/server/middleware/withError';
+import { withRateLimit } from '@/server/middleware/withRateLimit';
 import { splitService } from '@/server/service/split.service';
 
 const amount = z
@@ -41,4 +42,4 @@ async function recordRun(req: NextRequest, ctx: HandlerContext) {
   return created(await splitService.recordRun(id, publicKey, body));
 }
 
-export const POST = compose(withError, withAuth)(recordRun);
+export const POST = compose(withError, withRateLimit, withAuth)(recordRun);
